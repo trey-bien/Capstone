@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from authentication.views import index, signup_view, login_view, logout_view
+from actors.views import actor_detail_view
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -25,6 +26,7 @@ urlpatterns = [
     path('login/', login_view),
     path('logout/', logout_view),
     path('signup/', signup_view),
+    path('actor/<int:actor_id>/', actor_detail_view),
     path('admin/', admin.site.urls),
 ]
 
