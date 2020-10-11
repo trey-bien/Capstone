@@ -1,0 +1,13 @@
+<div>
+    {{ movie.photo }}<br>
+    Title: {{ movie.title }}<br>
+    Description: {{ movie.description }}<br>
+    Release Date: {{ movie.date_released }}<br>
+    Cast: 
+    <ul>
+    {% for actor in actors %}
+           <li><a href="/actor/{{ actor.id}}/">{{ actor }}</a></li>
+    {% endfor %} 
+    </ul>
+<div>
+

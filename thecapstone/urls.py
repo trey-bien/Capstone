@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from authentication.views import index, signup_view, login_view, logout_view
 from actors.views import actor_detail_view
+from movies.views import movie_detail_view
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -27,6 +28,7 @@ urlpatterns = [
     path('logout/', logout_view),
     path('signup/', signup_view),
     path('actor/<int:actor_id>/', actor_detail_view),
+    path('movie/<int:movie_id>/', movie_detail_view),
     path('admin/', admin.site.urls),
 ]
 
