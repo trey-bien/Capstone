@@ -27,8 +27,8 @@ urlpatterns = [
     path('login/', login_view),
     path('logout/', logout_view),
     path('signup/', signup_view),
-    path('actor/<int:actor_id>/', actor_detail_view),
-    path('movie/<int:movie_id>/', movie_detail_view),
+    path('actors/<int:actor_id>/', actor_detail_view),
+    path('movies/<int:movie_id>/', movie_detail_view),
     path('admin/', admin.site.urls),
 ]
 
